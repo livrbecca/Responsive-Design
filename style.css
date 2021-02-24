@@ -1,0 +1,156 @@
+/* ABOUT MEDIA QUERIES  */
+
+/* h1 {
+  font-size: 10rem;
+  text-align: center;
+  color: indigo;
+} */
+
+/* if you wanted to apply styles for something below 500px, would do max-width 500px then insert selectors*/
+/* this code would make all h1's green and a small font-size when the screen is 500px or below */
+
+/* @media screen and (max-width: 500px) {
+  h1 {
+    color: green;
+    font-size: 5rem;
+  }
+} */
+
+/* way to do both */
+/* @media screen and (min-width: 501px) and (max-width: 800px) {
+  h1 {
+    color: orangered;
+  }
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+  margin: 0;
+  font-family: Montserrat;
+}
+
+button {
+  display: inline-block;
+  line-height: 40px;
+  padding: 0.3em 0.5em;
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 1.5em;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: #7795f8;
+  outline: none;
+}
+
+/* 
+Cactus Image URL:  https://images.unsplash.com/photo-1485841890310-6a055c88698a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80 
+*/
+
+header {
+  background-image: url(" https://images.unsplash.com/photo-1485841890310-6a055c88698a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80");
+  height: 100vh;
+  background-position: bottom;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+main {
+    background-color: #e7eaec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+/* re-size for header */
+/* will resize below 700px */
+@media screen and (max-width: 700px) {
+  header {
+    height: 50vh;
+    font-size: 0.8em;
+  }
+  main h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    font-size: 0.5em;
+  }
+  main h2 {
+    font-size: 1.2em;
+  }
+}
+
+/* re-size for cards */
+
+
+main h2 {
+  color: #525f7f;
+  font-size: 2em;
+  font-weight: 400;
+  margin-top: 2em;
+}
+
+#cards {
+  background-color: white;
+  max-width: 1200px;
+  display: flex;
+  border-radius: 1em;
+  margin-top: 2em;
+}
+
+#cards img {
+  width: 66px;
+}
+
+#cards section {
+  padding: 4em;
+}
+
+#cards h3 {
+  color: #24b47e;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+#cards p {
+  line-height: 1.8em;
+  color: #525f7f;
+}
+
+#cards a {
+  color: #6772e5;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#cards section:nth-of-type(2) {
+  border-left: 7px solid #e7eaec;
+}
+
+@media screen and (max-width: 900px) {
+  #cards {
+    flex-direction: column;
+  }
+  #cards section:nth-of-type(2) {
+    border-top: 8px solid #e7eaec;
+    border-left: none;
+  }
+}
